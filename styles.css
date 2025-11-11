@@ -381,20 +381,6 @@ p {
     background: linear-gradient(180deg, #FFF2CC 0%, #2A2A2A 50%, #1A1A1A 100%);
 }
 
-.timeline .pulse {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 0;
-    width: 30px;
-    height: 30px;
-    background-color: #CC0000;
-    border-radius: 50%;
-    filter: blur(15px);
-    opacity: 0;
-    z-index: 1;
-    transition: opacity 0.3s ease;
-}
 
 .phase {
     display: flex;
