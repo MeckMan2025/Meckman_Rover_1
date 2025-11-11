@@ -558,14 +558,15 @@ p {
 
 .video-frame-accent {
     position: absolute;
-    top: -20px;
-    left: -20px;
-    right: -20px;
-    bottom: calc(-20px - 16px); /* Account for caption space */
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
     border: 2px solid #CC0000;
     border-radius: 20px;
     opacity: 0.5;
     z-index: -1;
+    pointer-events: none;
 }
 
 /* Footer */
@@ -679,5 +680,18 @@ p {
     
     .features, .build, .roadmap, .demo {
         padding: 80px 0;
+    }
+    
+    .video-container {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    .video-frame-accent {
+        top: -4px;
+        left: -4px;
+        right: -4px;
+        bottom: -4px;
+        border-radius: 16px;
     }
 }
