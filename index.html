@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rover_1 — Autonomous Waypoint Navigation</title>
+    <meta name="description" content="Rover_1: A compact autonomous rover designed for smooth, precise waypoint navigation with IMU fusion, mecanum kinematics, and predictive motion control.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>ROVER_1</h1>
+                <p class="tagline">Autonomous Waypoint Navigation</p>
+                <p class="description">
+                    A compact autonomous rover designed for smooth, precise waypoint navigation. Built with custom Python control software, IMU fusion, mecanum kinematics, and predictive motion control.
+                </p>
+                <div class="hero-actions">
+                    <button class="btn-primary" onclick="scrollToSection('features')">Explore Features</button>
+                    <button class="btn-secondary" onclick="scrollToSection('build')">View Build</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="Rover_1_Product_Vision_V4.png" alt="Rover_1 autonomous rover on grass" />
+                <div class="hero-accent"></div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Core Systems</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🧭</div>
+                    <h3>IMU Fusion</h3>
+                    <p>Real-time heading stabilization using complementary filter combining gyro and magnetometer data (98% gyro / 2% mag). Minimal drift during fast turns.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Mecanum Kinematics</h3>
+                    <p>True omnidirectional movement—forward, sideways, diagonal, rotational—controlled through mathematically modeled wheel velocities.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Pure Pursuit Path Tracking</h3>
+                    <p>Continuous path-following algorithm calculates smooth, curved trajectories between waypoints with dynamic lookahead adjustment.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Motion Profiling</h3>
+                    <p>Acceleration limiting prevents jerky motion. Linear acceleration capped at 1 m/s², angular at 2 rad/s² for realistic vehicle-like movement.</p>
+                </div>
+                <div class="feature-card current">
+                    <div class="feature-icon">🔧</div>
+                    <h3>Path Smoothing</h3>
+                    <p class="in-progress">In Progress</p>
+                    <p>Cubic spline interpolation and curvature-based speed control for predictive, adaptive movement on uneven terrain.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Build Section -->
+    <section id="build" class="build">
+        <div class="container">
+            <h2>Build Specifications</h2>
+            <div class="build-content">
+                <div class="build-specs">
+                    <h3>Hardware Platform</h3>
+                    <dl class="specs-list">
+                        <dt>Chassis</dt>
+                        <dd>Aluminum frame with modular mounting system</dd>
+                        <dt>Drive System</dt>
+                        <dd>4x mecanum wheels, dual motor driver</dd>
+                        <dt>Controller</dt>
+                        <dd>Raspberry Pi 4 running custom Python control stack</dd>
+                        <dt>Sensors</dt>
+                        <dd>BerryIMU v3 (gyro, accel, mag) and ZED-F9R GPS</dd>
+                        <dt>Power</dt>
+                        <dd>12.9V 10Ah Li-ion battery pack (122Wh)</dd>
+                        <dt>Connectivity</dt>
+                        <dd>Built-in Wi-Fi for web-based control</dd>
+                    </dl>
+
+                    <h3>Software Architecture</h3>
+                    <dl class="specs-list">
+                        <dt>imu_fusion.py</dt>
+                        <dd>Sensor fusion filter for gyro/mag alignment</dd>
+                        <dt>mecanum_kinematics.py</dt>
+                        <dd>Translation and rotation mapping</dd>
+                        <dt>pure_pursuit.py</dt>
+                        <dd>Path tracking logic</dd>
+                        <dt>motion_profiler.py</dt>
+                        <dd>Acceleration smoothing</dd>
+                        <dt>path_smoother.py</dt>
+                        <dd>Velocity and curvature planning</dd>
+                    </dl>
+                </div>
+                <div class="build-images">
+                    <div class="build-image current-state">
+                        <img src="Rover_1.png" alt="Rover_1 internal components and wiring" />
+                        <p class="image-caption">Internal view showing power system, Raspberry Pi control unit, BerryIMU v3 sensor suite, and GPS receiver wiring.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section id="roadmap" class="roadmap">
+        <div class="container">
+            <h2>Development Roadmap</h2>
+            <div class="timeline">
+                <div class="pulse"></div>
+                <div class="phase completed">
+                    <div class="phase-marker"></div>
+                    <div class="phase-content">
+                        <h3>Phase 1: IMU Fusion</h3>
+                        <p>Gyro + magnetometer complementary filter for smooth heading control</p>
+                        <span class="status">✅ Complete</span>
+                    </div>
+                </div>
+                <div class="phase completed">
+                    <div class="phase-marker"></div>
+                    <div class="phase-content">
+                        <h3>Phase 2: Mecanum Kinematics</h3>
+                        <p>Omnidirectional chassis control</p>
+                        <span class="status">✅ Complete</span>
+                    </div>
+                </div>
+                <div class="phase completed">
+                    <div class="phase-marker"></div>
+                    <div class="phase-content">
+                        <h3>Phase 3: Pure Pursuit Controller</h3>
+                        <p>Smooth waypoint path tracking</p>
+                        <span class="status">✅ Complete</span>
+                    </div>
+                </div>
+                <div class="phase completed">
+                    <div class="phase-marker"></div>
+                    <div class="phase-content">
+                        <h3>Phase 4: Motion Profiler</h3>
+                        <p>Acceleration and rotation limiting for refined control</p>
+                        <span class="status">✅ Complete</span>
+                    </div>
+                </div>
+                <div class="phase current">
+                    <div class="phase-marker"></div>
+                    <div class="phase-content">
+                        <h3>Phase 5: Path Smoothing</h3>
+                        <p>Curvature-based velocity profiling</p>
+                        <span class="status">🔧 In Progress</span>
+                    </div>
+                </div>
+                <div class="phase future">
+                    <div class="phase-marker"></div>
+                    <div class="phase-content">
+                        <h3>Phase 6: Sensor Fusion Expansion</h3>
+                        <p>Integrate full ZED-F9R inertial + GNSS data</p>
+                        <span class="status">🧠 Planned</span>
+                    </div>
+                </div>
+                <div class="phase future">
+                    <div class="phase-marker"></div>
+                    <div class="phase-content">
+                        <h3>Phase 7: Obstacle Detection</h3>
+                        <p>Add stereo or depth camera input for avoidance</p>
+                        <span class="status">🚧 Future</span>
+                    </div>
+                </div>
+                <div class="phase future">
+                    <div class="phase-marker"></div>
+                    <div class="phase-content">
+                        <h3>Phase 8: Solar Recharging</h3>
+                        <p>Energy-autonomous operation for long-term outdoor testing</p>
+                        <span class="status">☀️ Vision</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Video Section (placeholder for demo video) -->
+    <section id="demo" class="demo">
+        <div class="container">
+            <h2>See It In Action</h2>
+            <div class="video-container">
+                <div class="video-frame-accent"></div>
+                <video controls poster="Rover_1_Product_Vision_V4.png">
+                    <source src="Rover_1_First_Demo.mp4" type="video/mp4">
+                    <p>Your browser doesn't support HTML5 video. <a href="Rover_1_First_Demo.mp4">Download the demo video</a>.</p>
+                </video>
+                <p class="video-caption">Rover_1 demonstrating autonomous waypoint navigation with smooth motion profiling and omnidirectional movement capabilities.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Andrew Meckley Meckman Lab.<br>Rover_1 a platform for future autonomy.</p>
+            <div class="footer-links">
+                <a href="https://meckman.org" id="meckman-link" class="footer-link" target="_blank" rel="noopener noreferrer">meckman.org</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
